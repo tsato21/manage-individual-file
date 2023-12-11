@@ -8,6 +8,24 @@ function showAuthorizationDialog() {
   GmailApp;
 }
 /**
+ * Creates a custom menu in the Google Sheets UI when the spreadsheet is opened.
+ */
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+  // Create a custom menu with items to run specific functions.
+  ui.createMenu('Custom Menu')
+    .addItem('Copy and Name Files', 'copyAndNameFile')
+    .addSeparator()
+    .addItem('Output File Information', 'outputFileInfo')
+    .addSeparator()
+    .addItem('Share Files Without Notification', 'shareFilesWithoutNotification')
+    .addSeparator()
+    .addItem('Reset All Sharing Status', 'resetAllSharingStaus')
+    .addSeparator()
+    .addItem('Create Email Drafts', 'createDrafts')
+    .addToUi();
+}
+/**
  * Copies a sample file multiple times based on a list of names from a Google Sheet.
  * Names are fetched from a predefined sheet and each copied file is stored in a specified folder.
  */
@@ -163,8 +181,8 @@ function shareFilesWithoutNotification() {
       refSheet.getRange(3 + index, 4).setValue(editorEmails);
 
     } catch (e) {
-      console.error("Error processing file with ID " + target['File ID'] + ": " + e.message);
-      Browser.msgBox('Error occured. Contact the owner of the script.');
+      console.error("Error processing file, " + target['Sheet Name'] + ": " + e.message);
+      Browser.msgBox("Error processing file, " + target['Sheet Name'] + "Contact the owner of the script.");
     }
   });
 }

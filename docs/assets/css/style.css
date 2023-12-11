@@ -55,4 +55,6 @@ footer {
   color: #00008B; /* Change the color to red on hover, or choose your own color */
 }
 
-/* Add additional styles as needed */
+.custom-bullet {
+        list-style-type: square; /* Change this to the type of bullet point you want */
+}
