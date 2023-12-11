@@ -15,12 +15,12 @@ layout: default
     </ul>
   </div>
     <h2 id="top">About this Project</h2>
-    <p>This project encompasses a set of Google Apps Scripts designed to automate various tasks involving Google Sheets, Drive, and Gmail. The scripts primarily focus on file management, information retrieval, and automated email creation. These functionalities aid in organizing and sharing documents efficiently, particularly in educational or collaborative settings.</p>
+    <div>This project encompasses a set of Google Apps Scripts designed to automate various tasks involving Google Sheets, Drive, and Gmail. The scripts primarily focus on file management, information retrieval, and automated email creation. These functionalities aid in organizing and sharing documents efficiently, particularly in educational or collaborative settings.</div>
     <ul>
         <li><strong>File Management:</strong> Scripts to create and manage files based on data from Google Sheets. This includes copying files with specific names, gathering file information, and setting sharing settings.</li>
         <li><strong>Email Automation:</strong> Scripts to create draft emails in Gmail, tailored for specific recipients, without sending notifications for shared files.</li>
     </ul>
-    <p>Through the automation of these tasks, the scripts streamline the processes involved in managing and distributing files, as well as communicating information related to these files.</p>
+    <div>Through the automation of these tasks, the scripts streamline the processes involved in managing and distributing files, as well as communicating information related to these files.</div>
     <h2 id="prerequisites">Prerequisites</h2>
     <ul>
         <li>A Google account with access to Google Sheets, Drive, and Gmail.</li>
@@ -31,10 +31,10 @@ layout: default
     <ol>
       <li><strong>Open Your Google Sheet</strong>: Access <a href="https://docs.google.com/spreadsheets/d/1yGVn-w6uhpvNWz4rK0l37hPGIsqSeeXpweF6Vq_ko04/edit#gid=0" target="_blank" rel="noopener noreferrer">Sample Google Sheet</a>.</li>
       <li>Copy the Google Sheet to make your sheet.</li>
-      <li><strong>Conduct GAS Authorization</strong>: Access `Initial Setting` Sheet and click the initial setting button. This enables you to go to the authorization page for Google Apps Script.
-          <div style="margin-left: 30px">
-              <img src="assets/images/initial-setting.png" alt="Image of Initial Setting" width="200" height="100">
-          </div>
+      <li><strong>Conduct GAS Authorization</strong>: Access `system-data` Sheet and click the initial setting button. This enables you to go to the authorization page for Google Apps Script.
+      <div style="margin-left: 30px">
+          <img src="assets/images/initial-setting.png" alt="Image of Initial Setting" width="450" height="250">
+      </div>
       </li>
       <li><strong>Customize Constant Variables for Built-in Functions</strong>: Navigate to the Apps Script page and adjust the constant variables in `variables.gs` to suit your needs.
       </li>
@@ -47,9 +47,9 @@ layout: default
         <li><strong>Sharing Management</strong>: Sets and resets sharing permissions on files without sending notification emails.</li>
     </ul>
     <h2 id="usage">Usage</h2>
-    <p>Each function is available from the 'Custom Menu'.</p>
+    <div>Each function is available from the 'Custom Menu'.</div>
     <div style="margin-left: 30px">
-      <img src="assets/images/custom-menu.png" alt="Image of Custom Menu" width="200" height="100">
+      <img src="assets/images/custom-menu.png" alt="Image of Custom Menu" width="450" height="250">
     </div>
     <ul>
       <li>
@@ -57,7 +57,7 @@ layout: default
         <ol>
           <li>Set information in the orange range in `system-data` sheet, which is the reference data for other sheets.</li>
           <div style="margin-left: 30px">
-            <img src="assets/images/put-base-info.png" alt="Image of Put Base Info" width="200" height="100">
+            <img src="assets/images/put-base-info.png" alt="Image of Put Base Info" width="450" height="250">
           </div>
         </ol>
       </li>
@@ -65,47 +65,49 @@ layout: default
         <strong>Copy and Name Files</strong>: 
         <ol>
           <li>Set the file name information in the orange range in `create-file` sheet.</li>
-            <div style="margin-left: 30px">
-              <img src="assets/images/put-file-name.png" alt="Image of Put File Name" width="200" height="100">
-            </div>
+          <div style="margin-left: 30px">
+            <img src="assets/images/put-file-name.png" alt="Image of Put File Name" width="450" height="250">
+          </div>
           <li>Click the `Copy and Name Files` to create copies of a specified file for each entry in the list from the Google Sheet.</li>
-            <p>*You will be asked to put the URL of the target folder to store newly created files and the URL of the template file.</p>
+            <div>*You will be asked to put the URL of the target folder to store newly created files and the URL of the template file.</div>
         </ol>
       </li>
       <li>
         <strong>Retrieve and Display File Information</strong>: 
         <ol>
-          <li>Click `Output File Info` to display detailed information about files in a designated folder in `share-file` (Column A - D).
-            <p>*You will be asked to put the URL of the target folder where files are stored.</p>
+          <li>Click `Output File Info` to display detailed information about files in a designated folder in `share-file` (Column A - E).
+            <div>*You will be asked to put the URL of the target folder where files are stored.</div>
             <div style="margin-left: 30px">
-              <img src="assets/images/input-stored-file-url.png" alt="Image of input-stored-file-url" width="200" height="100">
+              <img src="assets/images/input-stored-file-url.png" alt="Image of input-stored-file-url" width="450" height="250">
             </div>
             <div style="margin-left: 30px">
-              <img src="assets/images/output-file-info.png" alt="Image of output-file-info" width="200" height="100">
+              <img src="assets/images/output-file-info.png" alt="Image of output-file-info" width="450" height="250">
             </div>
-            <p>*Since the file has not been shared with anyone at this moment (unless you share the stored folder with someone), "Editors' emails" returns empty.</p>
+            <div>*Since the file has not been shared with anyone at this moment (unless you share the stored folder with someone), "Editors' emails" returns empty.</div>
           </li>
         </ol>
       </li>
       <li>
         <strong>Manage File Sharing</strong>: 
-        <p>Click either `Share Files Without Notification` or `Reset All Sharing Status` to manage file sharing settings.</p>
+        <div>Click either `Share Files Without Notification` or `Reset All Sharing Status` to manage file sharing settings.</div>
         <ol class="custom-bullet">
           <li>
             <strong>Share Files Without Notification:</strong> This function allows you to share files with specified users without sending them a notification. Necessary information such as email addresses of the users and the file information is automatically displayed by Google Sheet built-in formula.
-            <p>*You will be asked to put the URL of the target folder where files are stored.</p>
-            <p>*Once you execute `Output File Info` again, the column, "Editors' emails" are supposed to show editors' emails.</p>
+            <div>*You will be asked to put the URL of the target folder where files are stored.</div>
+            <div>*Once you execute `Output File Info` again after this process, the column, "Editors' emails" is supposed to show editors' emails.</div>
           </li>
           <li>
             <strong>Reset All Sharing Status:</strong> This function resets the sharing settings of all files in a specific folder. It removes all users from the shared list and makes the files private.
           </li>
         </ol>
       </li>
+      <div>
         <strong>Create Email Drafts</strong>: 
+      </div>
         <ol>
           <li>CLick `Create Drafts` to generate personalized draft emails in Gmail.</li>
           <div style="margin-left: 30px">
-            <img src="assets/images/gmail-draft.png" alt="Image of gmail-draft" width="200" height="100">
+            <img src="assets/images/gmail-draft.png" alt="Image of gmail-draft" width="450" height="250">
           </div>
         </ol>
       </li>
@@ -116,6 +118,6 @@ layout: default
         <li><strong>Debugging and Maintenance</strong>: Regular maintenance and updates might be required to ensure compatibility with the latest Google services updates. Users should monitor the scripts for any errors and make necessary adjustments.</li>
         <li><strong>Enhanced Functionality</strong>: Users with advanced scripting skills can expand the capabilities of these scripts by integrating additional Google services or implementing more complex logic.</li>
     </ul>
-    <p>Overall, this project provides a foundation for automating repetitive tasks in file management and communication, allowing users to focus on more critical aspects of their work or study. By leveraging the power of Google Apps Script, this solution offers a customizable and scalable approach to managing digital workflows.</p>
+    <div>Overall, this project provides a foundation for automating repetitive tasks in file management and communication, allowing users to focus on more critical aspects of their work or study. By leveraging the power of Google Apps Script, this solution offers a customizable and scalable approach to managing digital workflows.</div>
   </body>
 </html>
