@@ -1,17 +1,13 @@
 {
-  "name": "gas-template",
+  "name": "sheet-mail-work-automator",
   "version": "1.0.0",
-  "description": "A personal template repository for creating a local dev environment using Google Apps Script, clasp, and github page",
-  "main": "src/sample.js",
-  "directories": {
-    "test": "tests"
-  },
+  "description": "X",
   "scripts": {
-    "test": "jest"
+    "format": "prettier --write src/**/*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ttsukagoshi/gas-template.git"
+    "url": "git+X"
   },
   "keywords": [
     "google-apps-script",
@@ -19,12 +15,12 @@
     "clasp",
     "github-page"
   ],
-  "author": "tigertiger",
+  "author": "tsato21",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/ttsukagoshi/gas-template/issues"
+    "url": "git+https://github.com/tsato21/sheet-mail-work-automator/issues"
   },
-  "homepage": "https://github.com/ttsukagoshi/gas-template#readme",
+  "homepage": "https://tsato21.github.io/scripts-showcase/gas-tools/each-tool/sheet-mail-work-automator",
   "devDependencies": {
     "@google/clasp": "^2.4.2",
     "@types/google-apps-script": "^1.0.64",
