@@ -20,7 +20,7 @@
   "bugs": {
     "url": "git+https://github.com/tsato21/sheet-mail-work-automator/issues"
   },
-  "homepage": "https://tsato21.github.io/scripts-showcase/gas-tools/each-tool/sheet-mail-work-automator",
+  "homepage": "https://tsato21.github.io/gas-tools/each-tool/sheet-mail-work-automator",
   "devDependencies": {
     "@google/clasp": "^2.4.2",
     "@types/google-apps-script": "^1.0.64",
